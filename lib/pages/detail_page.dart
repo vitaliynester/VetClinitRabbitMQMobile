@@ -73,14 +73,14 @@ class DetailPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: CardInfoWidget(
                     title: 'Лечение:',
-                    content: checkup.data!.diagnosis,
+                    content: checkup.data!.treatment,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: CardInfoWidget(
                     title: 'Жалобы:',
-                    content: checkup.data!.diagnosis,
+                    content: checkup.data!.complaints,
                   ),
                 ),
                 const Padding(

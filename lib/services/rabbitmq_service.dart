@@ -47,7 +47,7 @@ class RabbitMQService {
           await NotificationService.showNotification(
             title: 'Прием завершен',
             body:
-                "Прием на время: ${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year.toString().padLeft(2, '0')} ${date.hour.toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')} завершен!",
+                "Прием на время: ${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year.toString().padLeft(2, '0')} ${(date.hour + 3).toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')} завершен!",
           );
         }
         if (response['action'] == 'cancel') {
@@ -55,7 +55,7 @@ class RabbitMQService {
           await NotificationService.showNotification(
             title: 'Прием отменен',
             body:
-                "Прием на время: ${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year.toString().padLeft(2, '0')} ${date.hour.toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')} отменен!",
+                "Прием на время: ${date.day.toString().padLeft(2, '0')}.${date.month.toString().padLeft(2, '0')}.${date.year.toString().padLeft(2, '0')} ${(date.hour + 3).toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')} отменен!",
           );
         }
 
